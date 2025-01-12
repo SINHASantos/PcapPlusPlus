@@ -1,5 +1,4 @@
-#ifndef PCAPPP_PROTOCOL_TYPES
-#define PCAPPP_PROTOCOL_TYPES
+#pragma once
 
 #include <stdint.h>
 
@@ -219,9 +218,9 @@ namespace pcpp
 	const ProtocolType GTPv1 = 32;
 
 	/**
-	 * GTP protocol family (currently only GTPv1)
+	 * GTP protocol family (GTPv1 and GTPv2)
 	 */
-	const ProtocolTypeFamily GTP = 0x20;
+	const ProtocolTypeFamily GTP = 0x2039;
 
 	/**
 	 * IEEE 802.3 Ethernet protocol
@@ -268,8 +267,8 @@ namespace pcpp
 	 */
 	const ProtocolType Telnet = 40;
 
-  	/**
-   	 * File Transfer (FTP) Protocol
+	/**
+	 * File Transfer (FTP) Protocol
 	 */
 	const ProtocolType FTP = 41;
 
@@ -319,8 +318,8 @@ namespace pcpp
 	const ProtocolType VRRPv3 = 50;
 
 	/**
-	* VRRP protocol family (VRRPv2 and VRRPv3 protocols)
-	*/
+	 * VRRP protocol family (VRRPv2 and VRRPv3 protocols)
+	 */
 	const ProtocolTypeFamily VRRP = 0x3132;
 
 	/**
@@ -337,6 +336,26 @@ namespace pcpp
 	 * S7COMM protocol
 	 */
 	const ProtocolType S7COMM = 53;
+
+	/*
+	 * SMTP protocol
+	 */
+	const ProtocolType SMTP = 54;
+
+	/*
+	 * LDAP protocol
+	 */
+	const ProtocolType LDAP = 55;
+
+	/*
+	 * WireGuard protocol
+	 */
+	const ProtocolType WireGuard = 56;
+
+	/**
+	 * GTPv2 protocol
+	 */
+	const ProtocolType GTPv2 = 57;
 
 	/**
 	 * An enum representing OSI model layers
@@ -361,6 +380,4 @@ namespace pcpp
 		OsiModelLayerUnknown = 8
 	};
 
-} //namespace pcpp
-
-#endif
+}  // namespace pcpp

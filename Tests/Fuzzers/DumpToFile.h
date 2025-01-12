@@ -1,13 +1,12 @@
-#ifndef DUMP_TO_FILE_H
-#define DUMP_TO_FILE_H
+#pragma once
 
 #include <iostream>
 
 // This function is created as PcapPlusPlus doesn't seem to offer a way of
 // parsing Pcap files directly from memory
-static int dumpDataToPcapFile(const uint8_t *data, size_t size, const char* path)
+static int dumpDataToPcapFile(const uint8_t* data, size_t size, const char* path)
 {
-	FILE *fd;
+	FILE* fd;
 	int written = 0;
 
 	fd = fopen(path, "wb");
@@ -28,5 +27,3 @@ static int dumpDataToPcapFile(const uint8_t *data, size_t size, const char* path
 	fclose(fd);
 	return 0;
 }
-
-#endif // DUMP_TO_FILE_H

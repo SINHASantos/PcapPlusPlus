@@ -18,15 +18,19 @@ PTF_TEST_CASE(TestLoggerMultiThread);
 
 // Implemented in FileTests.cpp
 PTF_TEST_CASE(TestPcapFileReadWrite);
+PTF_TEST_CASE(TestPcapFilePrecision);
 PTF_TEST_CASE(TestPcapSllFileReadWrite);
 PTF_TEST_CASE(TestPcapSll2FileReadWrite);
 PTF_TEST_CASE(TestPcapRawIPFileReadWrite);
 PTF_TEST_CASE(TestPcapFileAppend);
 PTF_TEST_CASE(TestPcapNgFileReadWrite);
 PTF_TEST_CASE(TestPcapNgFileReadWriteAdv);
+PTF_TEST_CASE(TestPcapNgFileTooManyInterfaces);
 PTF_TEST_CASE(TestPcapFileReadLinkTypeIPv6);
 PTF_TEST_CASE(TestPcapFileReadLinkTypeIPv4);
 PTF_TEST_CASE(TestSolarisSnoopFileRead);
+PTF_TEST_CASE(TestPcapNgFilePrecision);
+PTF_TEST_CASE(TestPcapFileWriterDeviceDestructor);
 
 // Implemented in LiveDeviceTests.cpp
 PTF_TEST_CASE(TestPcapLiveDeviceList);
@@ -63,6 +67,7 @@ PTF_TEST_CASE(TestTcpReassemblySanity);
 PTF_TEST_CASE(TestTcpReassemblyRetran);
 PTF_TEST_CASE(TestTcpReassemblyMissingData);
 PTF_TEST_CASE(TestTcpReassemblyOutOfOrder);
+PTF_TEST_CASE(TestTcpReassemblyOOOWithManualClose);
 PTF_TEST_CASE(TestTcpReassemblyWithFIN_RST);
 PTF_TEST_CASE(TestTcpReassemblyMalformedPkts);
 PTF_TEST_CASE(TestTcpReassemblyMultipleConns);
@@ -74,6 +79,8 @@ PTF_TEST_CASE(TestTcpReassemblyMaxOOOFrags);
 PTF_TEST_CASE(TestTcpReassemblyMaxSeq);
 PTF_TEST_CASE(TestTcpReassemblyDisableOOOCleanup);
 PTF_TEST_CASE(TestTcpReassemblyTimeStamps);
+PTF_TEST_CASE(TestTcpReassemblyFinReset);
+PTF_TEST_CASE(TestTcpReassemblyHighPrecision);
 
 // Implemented in IPFragmentationTests.cpp
 PTF_TEST_CASE(TestIPFragmentationSanity);
